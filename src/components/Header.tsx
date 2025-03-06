@@ -21,26 +21,26 @@ const Header = () => {
       className={cn(
         'fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300',
         scrolled
-          ? 'bg-white/90 backdrop-blur-sm shadow-md py-3'
-          : 'bg-transparent py-5'
+          ? 'bg-white shadow-sm py-2'
+          : 'bg-transparent py-4'
       )}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <a href="/" className="flex items-center space-x-2">
-          <span className="text-valor-primary font-heading font-bold text-2xl tracking-tight">
+          <span className="text-valor-primary font-heading font-bold text-xl tracking-tight">
             Valor<span className="text-valor-secondary">Novo</span>
           </span>
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden md:flex items-center space-x-6">
           {['Início', 'Serviços', 'Sobre Nós', 'Conteúdos', 'Contato'].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
               className={cn(
-                'link-underline text-sm font-medium transition-colors',
-                scrolled ? 'text-valor-dark' : 'text-valor-light'
+                'text-sm font-medium transition-colors',
+                scrolled ? 'text-valor-dark hover:text-valor-secondary' : 'text-valor-light hover:text-valor-light/80'
               )}
             >
               {item}
@@ -48,7 +48,7 @@ const Header = () => {
           ))}
           <a
             href="#contato"
-            className="valor-button-primary px-4 py-2"
+            className="valor-button-primary px-4 py-2 text-sm"
           >
             Fale Conosco
           </a>
@@ -79,7 +79,7 @@ const Header = () => {
             <a
               key={item}
               href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
-              className="text-valor-light text-xl font-medium hover:text-valor-accent transition-colors"
+              className="text-valor-light text-lg font-medium hover:text-valor-accent transition-colors"
               onClick={() => setIsOpen(false)}
             >
               {item}
