@@ -64,12 +64,12 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
                 valor: {
-                    primary: '#1A365D',    // Deep navy blue
-                    secondary: '#2A6BAA',  // Conservative blue
-                    accent: '#4A7FB5',     // Professional blue
-                    light: '#F7FAFC',      // Off-white
-                    dark: '#2D3748',       // Dark gray
-                    muted: '#A0AEC0',      // Medium gray
+                    primary: '#0F3460',    // Azul escuro conservador
+                    secondary: '#1A579A',  // Azul médio mais neutro
+                    accent: '#3B719F',     // Azul mais tradicional
+                    light: '#F8FAFC',      // Branco azulado
+                    dark: '#2D3748',       // Cinza escuro
+                    muted: '#94A3B8',      // Cinza médio
                 }
 			},
 			borderRadius: {
@@ -87,34 +87,14 @@ export default {
 					to: { height: '0' }
 				},
                 'fade-in': {
-                    '0%': { opacity: '0', transform: 'translateY(10px)' },
+                    '0%': { opacity: '0', transform: 'translateY(5px)' },
                     '100%': { opacity: '1', transform: 'translateY(0)' }
-                },
-                'slide-in-left': {
-                    '0%': { opacity: '0', transform: 'translateX(-10px)' },
-                    '100%': { opacity: '1', transform: 'translateX(0)' }
-                },
-                'slide-in-right': {
-                    '0%': { opacity: '0', transform: 'translateX(10px)' },
-                    '100%': { opacity: '1', transform: 'translateX(0)' }
-                },
-                'scale-up': {
-                    '0%': { opacity: '0', transform: 'scale(0.98)' },
-                    '100%': { opacity: '1', transform: 'scale(1)' }
-                },
-                'float': {
-                    '0%, 100%': { transform: 'translateY(0)' },
-                    '50%': { transform: 'translateY(-5px)' }
                 }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-                'fade-in': 'fade-in 0.5s ease-out',
-                'slide-in-left': 'slide-in-left 0.5s ease-out',
-                'slide-in-right': 'slide-in-right 0.5s ease-out',
-                'scale-up': 'scale-up 0.4s ease-out',
-                'float': 'float 5s ease-in-out infinite'
+                'fade-in': 'fade-in 0.4s ease-out',
 			},
             fontFamily: {
                 sans: ['Inter', 'sans-serif'],
@@ -122,18 +102,10 @@ export default {
             },
             backgroundImage: {
                 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-                'hero-pattern': 'linear-gradient(to right, rgba(26, 54, 93, 0.9), rgba(26, 54, 93, 0.6)), url("/hero-bg.jpg")',
             },
             boxShadow: {
-                'glass': '0 2px 10px rgba(0, 0, 0, 0.05)',
-                'card': '0 4px 6px -1px rgba(0, 0, 0, 0.05)',
-                'button': '0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-            },
-            transitionDuration: {
-                '2000': '2000ms',
-            },
-            backdropBlur: {
-                'xs': '2px',
+                'card': '0 2px 5px rgba(0, 0, 0, 0.05)',
+                'button': '0 1px 3px rgba(0, 0, 0, 0.1)',
             }
 		}
 	},

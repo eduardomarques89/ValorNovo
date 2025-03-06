@@ -21,7 +21,7 @@ const Header = () => {
       className={cn(
         'fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300',
         scrolled
-          ? 'bg-white shadow-sm py-2'
+          ? 'bg-white shadow-md py-2'
           : 'bg-transparent py-4'
       )}
     >
@@ -33,14 +33,14 @@ const Header = () => {
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-6">
+        <nav className="hidden md:flex items-center space-x-8">
           {['Início', 'Serviços', 'Sobre Nós', 'Conteúdos', 'Contato'].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
               className={cn(
-                'text-sm font-medium transition-colors',
-                scrolled ? 'text-valor-dark hover:text-valor-secondary' : 'text-valor-light hover:text-valor-light/80'
+                'text-base font-medium transition-colors',
+                scrolled ? 'text-valor-dark hover:text-valor-primary' : 'text-valor-light hover:text-valor-light/80'
               )}
             >
               {item}
@@ -48,9 +48,9 @@ const Header = () => {
           ))}
           <a
             href="#contato"
-            className="valor-button-primary px-4 py-2 text-sm"
+            className="valor-button-primary px-5 py-2.5 text-base"
           >
-            Fale Conosco
+            Entre em Contato
           </a>
         </nav>
 
@@ -70,7 +70,7 @@ const Header = () => {
       {/* Mobile Menu */}
       <div
         className={cn(
-          'fixed inset-0 bg-valor-primary/95 z-40 flex flex-col items-center justify-center md:hidden transition-opacity duration-300',
+          'fixed inset-0 bg-valor-primary z-40 flex flex-col items-center justify-center md:hidden transition-opacity duration-300',
           isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
         )}
       >
@@ -87,10 +87,10 @@ const Header = () => {
           ))}
           <a
             href="#contato"
-            className="valor-button-accent px-6 py-3 mt-4"
+            className="valor-button-primary px-6 py-3 mt-4"
             onClick={() => setIsOpen(false)}
           >
-            Fale Conosco
+            Entre em Contato
           </a>
         </nav>
       </div>
